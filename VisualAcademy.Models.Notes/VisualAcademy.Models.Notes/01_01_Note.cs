@@ -1,10 +1,11 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Hawaso.Models.Notes
 {
     /// <summary>
     /// Note 클래스: Notes 테이블과 일대일 매핑되는 ViewModel 클래스
+    /// Note, NoteModel, NoteViewModel, NoteDto, NoteEntity, NoteObject, 
+    /// NoteDomain, ...
     /// </summary>
     public class Note
     {
@@ -13,7 +14,7 @@ namespace Hawaso.Models.Notes
 
         [Display(Name = "작성자")]
         [Required(ErrorMessage = "* 이름을 작성해 주세요.")]
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty; 
 
         [EmailAddress(ErrorMessage = "* 이메일을 정확히 입력하세요.")]
         public string Email { get; set; }
